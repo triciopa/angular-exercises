@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ExerciseSum';
+  numbers: number[];
+
+  constructor() {
+    this.numbers = [1, 8, 45, 954];
+  }
 }
