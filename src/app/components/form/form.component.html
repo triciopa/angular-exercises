@@ -1,0 +1,11 @@
+<div>
+  <label>Title</label>
+  <input type="text" [(ngModel)]="newTask.title">  
+</div>
+<div>
+  <label for="">Description</label>
+  <input type="text" [(ngModel)]="newTask.description">
+
+</div>
+<button (click)="onClick()">Send</button>
+{{ newTask | json }}

@@ -13,3 +13,8 @@
 
 <h2>Calculator</h2>
 <app-calc></app-calc>
+
+<div class="rows">
+  <app-form (createdTask)="onCreatedTask($event)"></app-form>  
+  <app-list [tasks]="taskArray"></app-list>
+</div>
