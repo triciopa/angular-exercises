@@ -11,4 +11,8 @@ export class AppComponent {
   constructor() {
     this.numbers = [1, 8, 45, 954];
   }
+
+  onFinish($event: any) {
+    console.log($event)
+  }
 }

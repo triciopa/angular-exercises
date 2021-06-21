@@ -6,8 +6,9 @@
 
 <h2>Cronometer</h2>
 <div class="rows">
-  <app-cron></app-cron>
-  <app-cron></app-cron>
+  <app-cron [init]="8" (finish)="onFinish($event)"></app-cron>
+  <app-cron [init]="6" (finish)="onFinish($event)"></app-cron>
+  <app-cron [init]="numbers[2]" (finish)="onFinish($event)"></app-cron>
 </div>
 
 <h2>Calculator</h2>
