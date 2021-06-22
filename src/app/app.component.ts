@@ -22,6 +22,6 @@ export class AppComponent {
 
   onCreatedTask($event: any) {
     this.taskArray.push($event);
-    console.log(this.taskArray);
+    // console.log(this.taskArray);
   }
 }

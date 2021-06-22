@@ -1,0 +1,33 @@
+.twoList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  * {
+    margin: 10px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+  min-width: 500px;
+  .task {
+    border: solid 1px black;
+    padding: 10px;
+    width: 40%;
+    h3 {
+      margin-top: 10px;
+    }
+  }
+
+  .complete {
+    background-color: lightgreen;
+  }
+
+  .incomplete {
+    background-color: tomato;
+  }
+}

@@ -1,11 +1,16 @@
 <div>
-  <label>Title</label>
-  <input type="text" [(ngModel)]="newTask.title">  
-</div>
-<div>
-  <label for="">Description</label>
-  <input type="text" [(ngModel)]="newTask.description">
+  <div>
+    <label>Title</label>
+    <input type="text" [(ngModel)]="newTask.title">  
+  </div>
+  <div>
+    <label for="">Description</label>
+    <input type="text" [(ngModel)]="newTask.description">
 
+  </div>
+  <button (click)="onClick()">Send</button>
+  <p 
+    [ngStyle]="{ lineHeight: '24px', backgroundColor: 'salmon', padding: '10px' }">
+    Live view: {{ newTask | json }}
+  </p>
 </div>
-<button (click)="onClick()">Send</button>
-<p [ngStyle]="{ lineHeight: '24px', backgroundColor: 'salmon' }"> Live view: {{ newTask | json }}</p>

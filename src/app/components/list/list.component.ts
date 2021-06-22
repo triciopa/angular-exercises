@@ -29,4 +29,12 @@ export class ListComponent implements OnInit {
 
   }
 
+  onClick(pTask: Task) {
+    pTask.completed = !pTask.completed;
+  }
+
+  onErase(pIndex: number) {
+    this.tasks.splice(pIndex, 1);
+  }
+
 }

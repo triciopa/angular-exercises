@@ -1,2 +1,11 @@
-<div [innerHTML]="showTasks()"></div>
-
+<div class="twoList">
+  <div [innerHTML]="showTasks()"></div>
+  <div class="list">
+    <div class="task" *ngFor="let task of tasks; let index = index;" [ngClass]="{complete: task.completed, incomplete: !task.completed}">
+      <h3>{{ task.title }}</h3>
+      <p>{{ task.description }}</p>
+      <button (click)="onClick(task)">{{ !task.completed ? 'Complete' : 'Reset'}}</button>
+      <button (click)="onErase(index)">Erase</button>      
+    </div>
+  </div>
+</div>
