@@ -32,8 +32,7 @@ export class ProductOrderComponent implements OnInit {
       this.productArray.splice(index, 1)
     } else {
       this.productArray[index].q--;
-    }
-    
+    }    
   }
 
 }
