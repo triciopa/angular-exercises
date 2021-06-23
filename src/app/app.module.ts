@@ -8,6 +8,8 @@ import { CronComponent } from './components/cron/cron.component';
 import { CalcComponent } from './components/calc/calc.component';
 import { FormComponent } from './components/form/form.component';
 import { ListComponent } from './components/list/list.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductOrderComponent } from './components/product-order/product-order.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ListComponent } from './components/list/list.component';
     CronComponent,
     CalcComponent,
     FormComponent,
-    ListComponent
+    ListComponent,
+    ProductListComponent,
+    ProductOrderComponent
   ],
   imports: [
     BrowserModule,

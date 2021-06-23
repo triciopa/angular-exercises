@@ -1,21 +1,42 @@
-<h2>Sum</h2>
-<div class="rows">
-  <app-sum [num1]="6" [num2]="9"></app-sum>
-  <app-sum [num1]="numbers[0]" [num2]="numbers[1]"></app-sum>
-</div>
+<div class="content">
+  <div>
+    <h2>Sum</h2>
+    <div class="rows">
+      <app-sum [num1]="6" [num2]="9"></app-sum>
+      <app-sum [num1]="numbers[0]" [num2]="numbers[1]"></app-sum>
+    </div>
+  </div>
 
-<h2>Cronometer</h2>
-<div class="rows">
-  <app-cron [init]="8" (finish)="onFinish($event)"></app-cron>
-  <app-cron [init]="6" (finish)="onFinish($event)"></app-cron>
-  <app-cron [init]="numbers[2]" (finish)="onFinish($event)"></app-cron>
-</div>
+  <div>
+    <h2>Cronometer</h2>
+    <div class="rows">
+      <app-cron [init]="8" (finish)="onFinish($event)"></app-cron>
+      <app-cron [init]="6" (finish)="onFinish($event)"></app-cron>
+      <app-cron [init]="numbers[2]" (finish)="onFinish($event)"></app-cron>
+    </div>
+  </div>
 
-<h2>Calculator</h2>
-<app-calc></app-calc>
+  <div>
+    <h2>Calculator</h2>
+    <app-calc></app-calc>
+  </div>
 
-<h2>To-do List</h2>
-<div class="rows">
-  <app-form (createdTask)="onCreatedTask($event)"></app-form>  
-  <app-list [tasks]="taskArray"></app-list>
+  <div>
+    <h2>To-do List</h2>
+    <div class="rows">
+      <app-form (createdTask)="onCreatedTask($event)"></app-form>  
+      <app-list [tasks]="taskArray"></app-list>
+    </div>
+  </div>
+
+  <div class="marketContainer">
+    <h2>Register</h2>    
+    <div class="left">
+      <app-product-list title="Food" [products]="foodArray" (selected)="onSelected($event)"></app-product-list>
+      <app-product-list title="Drinks" [products]="drinksArray" (selected)="onSelected($event)"></app-product-list>
+    </div>
+    <div class="right">
+      <app-product-order [productArray]="selectedProducts"></app-product-order>
+    </div>
+  </div>
 </div>

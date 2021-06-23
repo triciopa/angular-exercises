@@ -1,0 +1,7 @@
+<h3>Your order</h3>
+<p>TOTAL: ${{ sumTotal() }}</p>
+<div class="products">
+  <ul class="product" *ngFor="let product of productArray; let index = index" (click)="onClick(index)">
+    <li>{{ product.name }} - ${{ product.price * product.q }} ({{ product.q }})</li>
+  </ul>
+</div>
