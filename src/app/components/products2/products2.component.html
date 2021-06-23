@@ -1,0 +1,10 @@
+<div class="products">
+  <div class="product" *ngFor="let product of products; let index = index">
+    <p>{{ product.name.toUpperCase() }}</p>
+    <div>
+      <p>Quantity: {{ product.quantity }}</p>
+      <p>{{ product.department }}</p>
+    </div>
+    <button (click)="onClick(index)">{{ buttonText }}</button>
+  </div>
+</div>

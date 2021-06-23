@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from './models/product.model';
+import { Product2 } from './models/product2.model';
 import { Task } from './models/tasks.model';
 
 @Component({
@@ -14,16 +15,22 @@ export class AppComponent {
   foodArray: Product[];
   drinksArray: Product[];
   selectedProducts: Product[];
+  selectedProds2: Product2[];
+  boughtProds2: Product2[];
 
   constructor() {
     this.numbers = [1, 8, 45, 954];
     this.taskArray = [];
     this.selectedProducts = [];
+    this.selectedProds2 = [];
+    this.boughtProds2 = [];
+
     this.foodArray = [
       new Product('Cheese', 'https://www.culturesforhealth.com/learn/wp-content/uploads/2016/04/Homemade-Cheddar-Cheese-header.jpg', 10),
       new Product('Ham', 'https://patagonia.net/wp-content/uploads/2018/02/JamonCrudo.jpg', 25),
       new Product('Salami','https://static4.depositphotos.com/1001719/376/i/600/depositphotos_3768099-stock-photo-salami-sausage.jpg',18)
     ];
+    
     this.drinksArray = [
       new Product('Coca-Cola','https://www.eluniverso.com/resizer/XDCSRrWf-mQVhi9fw2igV2hzPg8=/1005x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/6O3SHHDC55GTHHHGY4HAWTVD5A.jpg',8),
       new Product('Cinzano','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR877s_nLKltRC8nDK1hjTep9p2eiESKztFA&usqp=CAU',12),
@@ -50,6 +57,19 @@ export class AppComponent {
       $event.q = 1;
       this.selectedProducts.push($event);
     }
+  }
 
+  onCreatedProd($event: any) {
+    this.selectedProds2.push($event);
+  }
+
+  onBuy($event: number) {
+    const prod = this.selectedProds2.splice($event, 1);
+    this.boughtProds2.push(prod[0]);
+  }
+
+  onSell($event: number) {
+    const prod = this.boughtProds2.splice($event, 1);
+    this.selectedProds2.push(prod[0]);
   }
 }

@@ -39,4 +39,19 @@
       <app-product-order [productArray]="selectedProducts"></app-product-order>
     </div>
   </div>
+
+
+  <div class="buyList">
+    <h2>Shopping List</h2>
+    <div class="row">
+      <app-form2 (createdProd)="onCreatedProd($event)"></app-form2>
+    </div>
+    <div class="row lists">
+      <app-products2 [products]="selectedProds2" (buyProduct)="onBuy($event)" buttonText="Buy"></app-products2>
+      <app-products2 [products]="boughtProds2" (buyProduct)="onSell($event)" buttonText="Sell"></app-products2>
+    </div>
+  </div>
+
 </div>
+
+

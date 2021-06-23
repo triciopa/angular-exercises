@@ -10,6 +10,8 @@ import { FormComponent } from './components/form/form.component';
 import { ListComponent } from './components/list/list.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductOrderComponent } from './components/product-order/product-order.component';
+import { Form2Component } from './components/form2/form2.component';
+import { Products2Component } from './components/products2/products2.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ProductOrderComponent } from './components/product-order/product-order.
     FormComponent,
     ListComponent,
     ProductListComponent,
-    ProductOrderComponent
+    ProductOrderComponent,
+    Form2Component,
+    Products2Component
   ],
   imports: [
     BrowserModule,
